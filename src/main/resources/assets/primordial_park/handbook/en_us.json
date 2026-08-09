@@ -1,0 +1,76 @@
+{
+    "chapters": {
+        "time_travel": {
+            "title": "Time Travel",
+            "pages": [
+                {
+                    "paragraphs": [
+                        {
+                            "type": "image",
+                            "image": "primordial_park:handbook/image/time_travel/intro.png"
+                        },
+                        {
+                            "type": "text",
+                            "text": "Welcome, Adventurer, to the threshold of deep time! Bound within these pages are the foundational principles of temporal displacement, your guide to navigating hundreds of millions of years of Earth's forgotten history."
+                        }
+                    ]
+                }
+            ]
+        },
+        "zookeeping": {
+            "title": "Zookeeping",
+            "pages": [
+                {
+                    "paragraphs": [
+                        {
+                            "type": "text",
+                            "text": "WIP (zoo_basic)"
+                        }
+                    ],
+                    "condition": "zoo_basic"
+                },
+                {
+                    "paragraphs": [
+                        {
+                            "type": "text",
+                            "text": "WIP (zoo_advanced)"
+                        }
+                    ],
+                    "condition": "zoo_advanced"
+                }
+            ]
+        },
+        "biotech": {
+            "title": "Biotechnology",
+            "pages": [
+                {
+                    "paragraphs": [
+                        {
+                            "type": "text",
+                            "text": "WIP (biotech_basic)"
+                        }
+                    ],
+                    "condition": "biotech_basic"
+                },
+                {
+                    "paragraphs": [
+                        {
+                            "type": "text",
+                            "text": "WIP (biotech_advanced)"
+                        }
+                    ],
+                    "condition": "biotech_advanced"
+                },
+                {
+                    "paragraphs": [
+                        {
+                            "type": "text",
+                            "text": "WIP (biosynthesis)"
+                        }
+                    ],
+                    "condition": "biosynthesis"
+                }
+            ]
+        }
+    }
+}

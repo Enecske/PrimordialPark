@@ -1,18 +1,22 @@
 package net.enecske.primordial_park;
 
-import org.slf4j.Logger;
-
 import com.mojang.logging.LogUtils;
-
+import net.enecske.primordial_park.entity.ModAttachments;
+import net.enecske.primordial_park.entity.ModEntities;
+import net.enecske.primordial_park.inventory.ModMenuTypes;
+import net.enecske.primordial_park.item.ModCreativeModeTabs;
+import net.enecske.primordial_park.item.ModDataComponents;
+import net.enecske.primordial_park.item.ModItems;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.config.ModConfig;
-import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
+import org.slf4j.Logger;
 
 @Mod(PrimordialPark.MODID)
 public class PrimordialPark {
@@ -29,6 +33,17 @@ public class PrimordialPark {
         // Note that this is necessary if and only if we want *this* class (ExampleMod) to respond directly to events.
         // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
         NeoForge.EVENT_BUS.register(this);
+
+        ModCreativeModeTabs.register(modEventBus);
+
+        ModDataComponents.register(modEventBus);
+        ModAttachments.register(modEventBus);
+
+        ModItems.register(modEventBus);
+
+        ModEntities.register(modEventBus);
+
+        ModMenuTypes.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);

@@ -1,5 +1,8 @@
 package net.enecske.primordial_park;
 
+import net.enecske.primordial_park.entity.ModEntities;
+import net.enecske.primordial_park.entity.client.GeckoRenderer;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.ModContainer;
@@ -18,6 +21,6 @@ public class PrimordialParkClient {
 
     @SubscribeEvent
     static void onClientSetup(FMLClientSetupEvent event) {
-
+        EntityRenderers.register(ModEntities.GECKO.get(), GeckoRenderer::new);
     }
 }

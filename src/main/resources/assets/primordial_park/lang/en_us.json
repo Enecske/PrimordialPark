@@ -1,0 +1,30 @@
+{
+    "item.primordial_park.fossil_concretion": "Fossil Concretion",
+    "item.primordial_park.handbook": "Paleontologist's Handbook",
+    "item.primordial_park.handbook_upgrade": "Handbook Upgrade",
+    "item.primordial_park.unknown_fossil": "Unknown Fossil",
+
+    "entity.primordial_park.woolly_mammoth": "Woolly Mammoth",
+
+    "handbook_upgrade.primordial_park.zoo_basic": "Basic Zookeeping",
+    "handbook_upgrade.primordial_park.zoo_advanced": "Advanced Zookeeping Techniques",
+    "handbook_upgrade.primordial_park.biotech_basic": "Basic Bioengineering",
+    "handbook_upgrade.primordial_park.biotech_advanced": "Advanced Biotechnology",
+    "handbook_upgrade.primordial_park.biosynthesis": "Biosynthesis",
+
+    "tooltip.primordial_park.handbook_upgrades": "Upgrades",
+
+    "creativetab.primordial_park.primordial_park_tab": "Primordial Park",
+
+    "container.primordial_park.upgrade_handbook": "Upgrade Handbook",
+    "label.primordial_park.fossils_found": "Fossils found",
+
+    "handbook.primordial_park.species_index": "Species Index",
+    "handbook.primordial_park.time_travel": "Time Travel",
+    "handbook.primordial_park.zookeping": "Zookeeping",
+    "handbook.primordial_park.biotechnology": "Biotechnology",
+
+    "time_period.primordial_park.ice_age": "Ice Age",
+    "time_period.primordial_park.calabrian_stage": "Calabrian Stage",
+    "time_period.primordial_park.maastrichtian_stage": "Maastrichtian Stage"
+}
