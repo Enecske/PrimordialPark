@@ -25,7 +25,7 @@ public class DebugItem extends Item {
         try {
             if (level.isClientSide) return InteractionResultHolder.sidedSuccess(stack, true);
 
-            String fossil = "mammoth_ivory_tusk";
+            String fossil = "mammoth_cranium";
 
             SpeciesIndexAttachment attachment = player.getData(ModAttachments.SPECIES_INDEX.get()).addSpecies("woolly_mammoth");
 

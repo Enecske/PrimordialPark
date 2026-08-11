@@ -2,6 +2,7 @@ package net.enecske.primordial_park.event;
 
 import net.enecske.primordial_park.PrimordialPark;
 import net.enecske.primordial_park.client.gui.HandbookUpgradeScreen;
+import net.enecske.primordial_park.client.gui.PaleontologyTableScreen;
 import net.enecske.primordial_park.client.handbook.HandbookContentLoader;
 import net.enecske.primordial_park.client.species_index.EntryContentLoader;
 import net.enecske.primordial_park.inventory.ModMenuTypes;
@@ -22,5 +23,6 @@ public class ModClientEvents {
     @SubscribeEvent
     public static void registerScreens(RegisterMenuScreensEvent event) {
         event.register(ModMenuTypes.HANDBOOK_UPGRADE.get(), HandbookUpgradeScreen::new);
+        event.register(ModMenuTypes.PALEONTOLOGY_TABLE.get(), PaleontologyTableScreen::new);
     }
 }

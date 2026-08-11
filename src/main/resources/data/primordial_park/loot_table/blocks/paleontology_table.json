@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:block",
+    "pools": [
+        {
+            "conditions": [
+                {
+                    "condition": "minecraft:survives_explosion"
+                }
+            ],
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "primordial_park:paleontology_table"
+                }
+            ],
+            "rolls": 1
+        }
+    ],
+    "random_sequence": "primordial_park:blocks/paleontology_table"
+}

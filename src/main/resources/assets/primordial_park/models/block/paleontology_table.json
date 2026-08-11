@@ -1,0 +1,12 @@
+{
+    "parent": "minecraft:block/cube",
+    "textures": {
+        "down": "primordial_park:block/paleontology_table_bottom",
+        "east": "primordial_park:block/paleontology_table_side",
+        "north": "primordial_park:block/paleontology_table_front",
+        "particle": "primordial_park:block/paleontology_table_front",
+        "south": "primordial_park:block/paleontology_table_front",
+        "up": "primordial_park:block/paleontology_table_top",
+        "west": "primordial_park:block/paleontology_table_side"
+    }
+}

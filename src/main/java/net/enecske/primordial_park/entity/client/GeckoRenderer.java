@@ -15,7 +15,7 @@ public class GeckoRenderer extends MobRenderer<GeckoEntity, GeckoModel<GeckoEnti
 
     @Override
     public ResourceLocation getTextureLocation(GeckoEntity entity) {
-        return ResourceLocation.fromNamespaceAndPath(PrimordialPark.MODID, "textures/entity/gecko.png");
+        return ResourceLocation.fromNamespaceAndPath(PrimordialPark.MODID, "textures/species/gecko.png");
     }
 
     @Override

@@ -1,0 +1,9 @@
+{
+    "replace": false,
+    "values": [
+        {
+            "id": "primordial_park:paleontologist",
+            "required": false
+        }
+    ]
+}

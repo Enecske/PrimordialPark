@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "misc",
+    "pattern": [
+        "FC",
+        "PP",
+        "PP"
+    ],
+    "key": {
+        "F": {
+            "item": "minecraft:feather"
+        },
+        "C": {
+            "item": "minecraft:copper_ingot"
+        },
+        "P": {
+            "tag": "minecraft:planks"
+        }
+    },
+    "result": {
+        "id": "primordial_park:paleontology_table"
+    }
+}

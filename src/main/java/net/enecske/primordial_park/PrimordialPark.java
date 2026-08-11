@@ -1,12 +1,16 @@
 package net.enecske.primordial_park;
 
 import com.mojang.logging.LogUtils;
+import net.enecske.primordial_park.block.ModBlockEntities;
+import net.enecske.primordial_park.block.ModBlocks;
 import net.enecske.primordial_park.entity.ModAttachments;
 import net.enecske.primordial_park.entity.ModEntities;
 import net.enecske.primordial_park.inventory.ModMenuTypes;
 import net.enecske.primordial_park.item.ModCreativeModeTabs;
 import net.enecske.primordial_park.item.ModDataComponents;
 import net.enecske.primordial_park.item.ModItems;
+import net.enecske.primordial_park.villager.ModPoiTypes;
+import net.enecske.primordial_park.villager.ModVillagerProfessions;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.ModContainer;
@@ -40,8 +44,13 @@ public class PrimordialPark {
         ModAttachments.register(modEventBus);
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
+        ModBlockEntities.register(modEventBus);
 
         ModEntities.register(modEventBus);
+
+        ModPoiTypes.register(modEventBus);
+        ModVillagerProfessions.register(modEventBus);
 
         ModMenuTypes.register(modEventBus);
 

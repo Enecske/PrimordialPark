@@ -24,6 +24,7 @@ public class HandbookUpgradeItem extends Item {
 
         if (component != null)
             tooltipComponents.add(Component.translatable("handbook_upgrade.primordial_park.%s".formatted(component.id())).withStyle(ChatFormatting.GRAY));
-        else tooltipComponents.add(Component.literal("lorem ipsum").withStyle(ChatFormatting.GRAY, ChatFormatting.OBFUSCATED));
+        else
+            tooltipComponents.add(Component.literal("lorem ipsum").withStyle(ChatFormatting.GRAY, ChatFormatting.OBFUSCATED));
     }
 }

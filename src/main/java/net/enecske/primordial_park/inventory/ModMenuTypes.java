@@ -16,7 +16,11 @@ public class ModMenuTypes {
             MENUS.register("handbook_upgrade", () ->
                     IMenuTypeExtension.create((containerId, inv, data) -> new HandbookUpgradeMenu(containerId, inv)));
 
-    public static void register (IEventBus eventBus) {
+    public static final Supplier<MenuType<PaleontologyTableMenu>> PALEONTOLOGY_TABLE =
+            MENUS.register("paleontology_table", () ->
+                    IMenuTypeExtension.create(PaleontologyTableMenu::new));
+
+    public static void register(IEventBus eventBus) {
         MENUS.register(eventBus);
     }
 }
