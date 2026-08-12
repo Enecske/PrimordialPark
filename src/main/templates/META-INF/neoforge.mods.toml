@@ -33,7 +33,7 @@ displayName="${mod_name}" #mandatory
 #updateJSONURL="https://change.me.example.invalid/updates.json" #optional
 
 # A URL for the "homepage" for this mod, displayed in the mod UI
-#displayURL="https://change.me.to.your.mods.homepage.example.invalid/" #optional
+displayURL="https://github.com/Enecske/PrimordialPark/" #optional
 
 # A file name (in the root of the mod JAR) containing a logo for display
 #logoFile="examplemod.png" #optional
@@ -42,11 +42,11 @@ displayName="${mod_name}" #mandatory
 #credits="" #optional
 
 # The authors of the mod, displayed in the mod UI (optional)
-#authors=""
+authors="enecske"
 
 # The description text for the mod (multi line!) (#mandatory)
 description='''
-Example mod description.
+Unearth the forgotten horizons of Earth's history, explore ancient eras, tame legendary prehistoric beasts, and build the ultimate self-sustaining dinosaur park.
 '''
 
 # The [[mixins]] block allows you to declare your mixin config to FML so that it gets loaded.
