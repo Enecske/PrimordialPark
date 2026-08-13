@@ -510,7 +510,7 @@ public class HandbookScreen extends Screen {
                 }
             }
             case SPECIES_ENTRY -> {
-                Component title = Component.translatable("species.primordial_park.%s".formatted(selectedEntry.id())).withStyle(ChatFormatting.UNDERLINE);
+                Component title = Component.translatable("entity.primordial_park.%s".formatted(selectedEntry.id())).withStyle(ChatFormatting.UNDERLINE);
                 int titleWidth = font.width(title);
                 guiGraphics.drawString(this.font, title, leftPos + (backgroundWidth / 4) - (titleWidth / 2), topPos + margin, 0x000000, false);
 

@@ -1,10 +1,12 @@
 {
     "item.primordial_park.fossil_concretion": "Fossil Concretion",
     "item.primordial_park.handbook": "Paleontologist's Handbook",
+    "item.primordial_park.fossil_pouch": "Fossil Pouch",
     "item.primordial_park.handbook_upgrade": "Handbook Upgrade",
     "item.primordial_park.unknown_fossil": "Unknown Fossil",
     "item.primordial_park.report_card": "Report Card",
     "item.primordial_park.mammoth_cranium": "Mammoth Cranium",
+    "item.primordial_park.frozen_mammoth_flesh": "Frozen Mammoth Flesh",
 
     "block.primordial_park.paleontology_table": "Paleontology Table",
 
@@ -28,6 +30,7 @@
 
     "container.primordial_park.upgrade_handbook": "Upgrade Handbook",
     "label.primordial_park.fossils_found": "Fossils found",
+    "button.primordial_park.auto_pickup": "Toggle Auto Pickup",
 
     "handbook.primordial_park.species_index": "Species Index",
     "handbook.primordial_park.time_travel": "Time Travel",

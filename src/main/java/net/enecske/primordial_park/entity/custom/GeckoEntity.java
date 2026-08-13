@@ -39,7 +39,7 @@ public class GeckoEntity extends Animal {
     public static final SpeciesIndexEntry ENTRY = SpeciesIndexRegistry.register(new SpeciesIndexEntry() {
         private final Map<String, ItemStack> fossils = MapUtils.linkedMapOf(
                 Map.entry("mammoth_cranium", new ItemStack(ModItems.MAMMOTH_CRANIUM.get())),
-                Map.entry("frozen_mammoth_flesh", new ItemStack(Items.NAME_TAG)),
+                Map.entry("frozen_mammoth_flesh", new ItemStack(ModItems.FROZEN_MAMMOTH_FLESH.get())),
                 Map.entry("mammoth_ivory_tusk", new ItemStack(ModItems.FOSSIL_CONCRETION.get())));
 
         private final Map<String, Component> hints = Map.of(

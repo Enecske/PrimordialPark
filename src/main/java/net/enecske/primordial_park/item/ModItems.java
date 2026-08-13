@@ -4,6 +4,7 @@ import net.enecske.primordial_park.PrimordialPark;
 import net.enecske.primordial_park.TimePeriod;
 import net.enecske.primordial_park.entity.ModEntities;
 import net.enecske.primordial_park.item.component.FossilComponent;
+import net.enecske.primordial_park.item.component.FossilPouchComponent;
 import net.enecske.primordial_park.item.component.HandbookComponent;
 import net.enecske.primordial_park.item.component.HandbookUpgradeComponent;
 import net.enecske.primordial_park.item.custom.*;
@@ -36,6 +37,11 @@ public class ModItems {
                     .stacksTo(1)
                     .rarity(Rarity.UNCOMMON)));
 
+    public static final DeferredItem<Item> FOSSIL_POUCH = ITEMS.register("fossil_pouch",
+            () -> new FossilPouchItem(new Item.Properties()
+                    .stacksTo(1)
+                    .component(ModDataComponents.FOSSIL_POUCH, FossilPouchComponent.EMPTY)));
+
     public static final DeferredItem<Item> UNKNOWN_FOSSIL = ITEMS.register("unknown_fossil",
             () -> new UnknownFossilItem(new Item.Properties()
                     .stacksTo(1)));
@@ -46,6 +52,7 @@ public class ModItems {
 
     public static final ArrayList<DeferredItem<Item>> FOSSILS = new ArrayList<>();
     public static final DeferredItem<Item> MAMMOTH_CRANIUM = registerFossil("mammoth_cranium", "woolly_mammoth", new FossilComponent.ReportCardDataComponent(TimePeriod.ICE_AGE));
+    public static final DeferredItem<Item> FROZEN_MAMMOTH_FLESH = registerFossil("frozen_mammoth_flesh", "woolly_mammoth", new FossilComponent.DnaDataComponent("wip"));
 
 
     public static final DeferredItem<Item> DEBUG = ITEMS.register("debug",

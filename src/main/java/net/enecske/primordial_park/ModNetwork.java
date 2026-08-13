@@ -2,6 +2,7 @@ package net.enecske.primordial_park;
 
 import net.enecske.primordial_park.network.OpenHandbookUpgradeScreenPayload;
 import net.enecske.primordial_park.network.SyncSpeciesIndexPayload;
+import net.enecske.primordial_park.network.ToggleAutoPickupPayload;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.network.event.RegisterPayloadHandlersEvent;
@@ -17,6 +18,12 @@ public class ModNetwork {
                 OpenHandbookUpgradeScreenPayload.TYPE,
                 OpenHandbookUpgradeScreenPayload.STREAM_CODEC,
                 OpenHandbookUpgradeScreenPayload::handleOnServer
+        );
+
+        registrar.playToServer(
+                ToggleAutoPickupPayload.TYPE,
+                ToggleAutoPickupPayload.STREAM_CODEC,
+                ToggleAutoPickupPayload::handleOnServer
         );
 
         registrar.playToClient(

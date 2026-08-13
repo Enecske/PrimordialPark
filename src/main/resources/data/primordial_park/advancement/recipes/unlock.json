@@ -1,0 +1,27 @@
+{
+    "parent": "minecraft:recipes/root",
+    "criteria": {
+        "has_handbook": {
+            "conditions": {
+                "items": [
+                    {
+                        "items": "primordial_park:handbook"
+                    }
+                ]
+            },
+            "trigger": "minecraft:inventory_changed"
+        }
+    },
+    "requirements": [
+        [
+            "has_handbook"
+        ]
+    ],
+    "rewards": {
+        "recipes": [
+            "primordial_park:paleontology_table",
+            "primordial_park:report_card",
+            "primordial_park:fossil_pouch"
+        ]
+    }
+}

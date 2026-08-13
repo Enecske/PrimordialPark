@@ -185,6 +185,8 @@ public class PaleontologyTableBlockEntity extends BlockEntity {
         ReportCardComponent resultComponent = resultStack.get(ModDataComponents.REPORT_CARD);
 
         if (fossilComponent == null) return false;
+        if (fossilComponent.data().isEmpty()) return false;
+        if (!fossilComponent.data().get().type().equals("report_card")) return false;
 
         return resultComponent == null || fossilComponent.matches(resultComponent);
     }

@@ -3,6 +3,7 @@ package net.enecske.primordial_park.inventory;
 import net.enecske.primordial_park.PrimordialPark;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.inventory.MenuType;
+import net.minecraft.world.item.ItemStack;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.common.extensions.IMenuTypeExtension;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -19,6 +20,10 @@ public class ModMenuTypes {
     public static final Supplier<MenuType<PaleontologyTableMenu>> PALEONTOLOGY_TABLE =
             MENUS.register("paleontology_table", () ->
                     IMenuTypeExtension.create(PaleontologyTableMenu::new));
+
+    public static final Supplier<MenuType<FossilPouchMenu>> FOSSIL_POUCH =
+            MENUS.register("fossil_pouch", () ->
+                    IMenuTypeExtension.create((containerId, inv, data) -> new FossilPouchMenu(containerId, inv, ItemStack.OPTIONAL_STREAM_CODEC.decode(data))));
 
     public static void register(IEventBus eventBus) {
         MENUS.register(eventBus);

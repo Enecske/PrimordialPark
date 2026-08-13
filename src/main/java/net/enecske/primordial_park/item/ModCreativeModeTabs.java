@@ -35,6 +35,8 @@ public class ModCreativeModeTabs {
                         output.accept(handbookUpgradeWithId("biotech_advanced"));
                         output.accept(handbookUpgradeWithId("biosynthesis"));
 
+                        output.accept(ModItems.FOSSIL_POUCH);
+
                         output.accept(ModBlocks.PALEONTOLOGY_TABLE);
 
                         output.accept(ModItems.REPORT_CARD);

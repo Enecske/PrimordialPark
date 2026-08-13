@@ -1,10 +1,7 @@
 package net.enecske.primordial_park.item;
 
 import net.enecske.primordial_park.PrimordialPark;
-import net.enecske.primordial_park.item.component.FossilComponent;
-import net.enecske.primordial_park.item.component.HandbookComponent;
-import net.enecske.primordial_park.item.component.HandbookUpgradeComponent;
-import net.enecske.primordial_park.item.component.ReportCardComponent;
+import net.enecske.primordial_park.item.component.*;
 import net.minecraft.core.component.DataComponentType;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
@@ -30,6 +27,13 @@ public class ModDataComponents {
             builder -> builder
                     .persistent(HandbookUpgradeComponent.CODEC)
                     .networkSynchronized(HandbookUpgradeComponent.STREAM_CODEC)
+    );
+
+    public static final Supplier<DataComponentType<FossilPouchComponent>> FOSSIL_POUCH = DATA_COMPONENTS.registerComponentType(
+            "fossil_pouch",
+            builder -> builder
+                    .persistent(FossilPouchComponent.CODEC)
+                    .networkSynchronized(FossilPouchComponent.STREAM_CODEC)
     );
 
     public static final Supplier<DataComponentType<Component>> UNKNOWN_FOSSIL_HINT = DATA_COMPONENTS.registerComponentType(
