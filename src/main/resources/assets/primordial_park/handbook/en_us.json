@@ -14,6 +14,86 @@
                             "text": "Welcome, Adventurer, to the threshold of deep time! Bound within these pages are the foundational principles of temporal displacement, your guide to navigating hundreds of millions of years of Earth's forgotten history."
                         }
                     ]
+                },
+                {
+                    "paragraphs": [
+                        {
+                            "type": "text",
+                            "text": {
+                                "text": "Fossils",
+                                "bold": true
+                            }
+                        },
+                        {
+                            "type": "text",
+                            "text": [
+                                "You can find fossils all over the world. They come in 3 types:\n- ",
+                                {
+                                    "text": "Chronal Fossils",
+                                    "color": "dark_purple"
+                                },
+                                " hold data about when the animal lived.\n- ",
+                                {
+                                    "text": "Genetic Samples",
+                                    "color": "dark_purple"
+                                },
+                                " hold a specific trait that might be extracted.\n- ",
+                                {
+                                    "text": "Artifacts",
+                                    "color": "dark_purple"
+                                },
+                                " can be used to make weapons, tools, armor or decorations."
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "paragraphs": [
+                        {
+                            "type": "item",
+                            "id": "primordial_park:fossil_pouch"
+                        },
+                        {
+                            "type": "text",
+                            "text": [
+                                "Use a ",
+                                {
+                                    "text": "Fossil Pouch",
+                                    "color": "dark_aqua"
+                                },
+                                " to collect fossils without cluttering your inventory. These can be set to pick up items automatically into the Pouch."
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "paragraphs": [
+                        {
+                            "type": "text",
+                            "text": [
+                                "To analyze a Chronal fossil, use the ",
+                                {
+                                    "text": "Paleontology Table",
+                                    "color": "dark_aqua"
+                                },
+                                ". This block, aside from functioning as the workstation of the ",
+                                {
+                                    "text": "Paleontologist Villager",
+                                    "color": "dark_aqua"
+                                },
+                                ", will fill ",
+                                {
+                                    "text": "Report Cards",
+                                    "color": "dark_aqua"
+                                },
+                                " with data from the analyzed fossil, given that its Villager is nearby."
+                            ]
+                        },
+                        {
+                            "type": "item",
+                            "id": "primordial_park:paleontology_table"
+                        }
+                    ]
                 }
             ]
         },

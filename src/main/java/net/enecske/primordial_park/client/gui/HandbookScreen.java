@@ -39,7 +39,7 @@ import org.jetbrains.annotations.NotNull;
 import java.util.*;
 import java.util.function.Function;
 
-// TODO artwork, items in handbook pages
+// TODO artwork
 
 @OnlyIn(Dist.CLIENT)
 public class HandbookScreen extends Screen {
@@ -52,6 +52,7 @@ public class HandbookScreen extends Screen {
     private final int lineWidth = 160 - (margin * 2);
     private static final int lineHeight = 12;
     private static final int entrySize = 40;
+    private static final float itemScale = 4f;
 
     private static int leftPos;
     private static int topPos;
@@ -368,7 +369,7 @@ public class HandbookScreen extends Screen {
                         if (paragraph instanceof HandbookContent.HandbookTextParagraph textParagraph) {
                             guiGraphics.drawWordWrap(
                                     this.font,
-                                    Component.literal(textParagraph.text),
+                                    textParagraph.text,
                                     leftPos + margin,
                                     paragraphStart,
                                     lineWidth,
@@ -384,6 +385,13 @@ public class HandbookScreen extends Screen {
                                     imageParagraph.width, imageParagraph.height
                             );
                             paragraphStart += imageParagraph.height + 5;
+                        } else if (paragraph instanceof HandbookContent.HandbookItemParagraph itemParagraph) {
+                            renderScaledItem(
+                                    guiGraphics,
+                                    itemParagraph.stack,
+                                    leftPos + (backgroundWidth / 4) - (int) (itemScale * 16 / 2), paragraphStart
+                            );
+                            paragraphStart += (int) (itemScale * 16) + 5;
                         }
                     }
 
@@ -396,7 +404,7 @@ public class HandbookScreen extends Screen {
                         if (paragraph instanceof HandbookContent.HandbookTextParagraph textParagraph) {
                             guiGraphics.drawWordWrap(
                                     this.font,
-                                    Component.literal(textParagraph.text),
+                                    textParagraph.text,
                                     leftPos + (backgroundWidth / 2) + margin,
                                     paragraphStart,
                                     lineWidth,
@@ -412,6 +420,13 @@ public class HandbookScreen extends Screen {
                                     imageParagraph.width, imageParagraph.height
                             );
                             paragraphStart += imageParagraph.height + 5;
+                        }  else if (paragraph instanceof HandbookContent.HandbookItemParagraph itemParagraph) {
+                            renderScaledItem(
+                                    guiGraphics,
+                                    itemParagraph.stack,
+                                    leftPos + (backgroundWidth / 4 * 3) - (int) (itemScale * 16 / 2), paragraphStart
+                            );
+                            paragraphStart += (int) (itemScale * 16) + 5;
                         }
                     }
                 } catch (Exception e) {
@@ -652,6 +667,19 @@ public class HandbookScreen extends Screen {
         );
 
         RenderSystem.disableBlend();
+    }
+
+    private void renderScaledItem(GuiGraphics guiGraphics, ItemStack stack, int x, int y) {
+        if (stack.isEmpty()) return;
+
+        guiGraphics.pose().pushPose();
+
+        guiGraphics.pose().translate(x, y, 0);
+        guiGraphics.pose().scale(itemScale, itemScale, 1f);
+
+        guiGraphics.renderItem(stack, 0, 0);
+
+        guiGraphics.pose().popPose();
     }
 
     @Override

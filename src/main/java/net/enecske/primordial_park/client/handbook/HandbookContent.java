@@ -3,8 +3,12 @@ package net.enecske.primordial_park.client.handbook;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
+import com.mojang.serialization.JsonOps;
 import net.enecske.primordial_park.client.helper.TextureHelper;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.ComponentSerialization;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.ItemStack;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.api.distmarker.OnlyIn;
 
@@ -96,7 +100,7 @@ public class HandbookContent {
             for (HandbookPage page : pages) {
                 if (page.condition == null) {
                     filtered.add(page);
-                    break;
+                    continue;
                 }
                 for (String condition : conditions) {
                     if (page.condition.equals(condition)) {
@@ -141,8 +145,11 @@ public class HandbookContent {
                     case "image":
                         this.paragraphs[i] = new HandbookImageParagraph(object);
                         break;
+                    case "item":
+                        this.paragraphs[i] = new HandbookItemParagraph(object);
+                        break;
                     default:
-                        throw new HandbookContentException("'type' must be one of: 'text', 'image'");
+                        throw new HandbookContentException("'type' must be one of: 'text', 'image', 'item'");
                 }
             }
 
@@ -175,19 +182,21 @@ public class HandbookContent {
 
     @OnlyIn(Dist.CLIENT)
     public static class HandbookTextParagraph extends HandbookParagraph {
-        public final String text;
+        public final Component text;
 
         private HandbookTextParagraph(JsonObject object) throws HandbookContentException {
-            if (!object.has("text")) throw new HandbookContentException("Paragraph must contain String field 'text'");
-            if (!object.get("text").isJsonPrimitive() || !object.getAsJsonPrimitive("text").isString())
-                throw new HandbookContentException("'text' must be a String");
+            if (!object.has("text"))
+                throw new HandbookContentException("Paragraph must contain JSON text field 'text'");
 
-            this.text = object.get("text").getAsString();
+            this.text = ComponentSerialization.CODEC
+                    .parse(JsonOps.INSTANCE, object.get("text"))
+                    .resultOrPartial()
+                    .orElseThrow(() -> new HandbookContentException("Invalid JSON component"));
         }
 
         @Override
         public String toString() {
-            return "{ type: text, text: [length: %s] }".formatted(text.length());
+            return "{ type: text, text: [length: %s] }".formatted(text.getString().length());
         }
     }
 
@@ -216,6 +225,25 @@ public class HandbookContent {
         @Override
         public String toString() {
             return "{ type: image, image: %s }".formatted(imageLocation);
+        }
+    }
+
+    @OnlyIn(Dist.CLIENT)
+    public static class HandbookItemParagraph extends HandbookParagraph {
+        public final ItemStack stack;
+
+        private HandbookItemParagraph(JsonObject object) throws HandbookContentException {
+            if (!object.has("id")) throw new HandbookContentException("Paragraph must contain String field 'id'");
+
+            this.stack = ItemStack.CODEC
+                    .parse(JsonOps.INSTANCE, object)
+                    .resultOrPartial()
+                    .orElseThrow(() -> new HandbookContentException("Invalid JSON component"));
+        }
+
+        @Override
+        public String toString() {
+            return "{ type: item, stack: %s }".formatted(stack);
         }
     }
 
