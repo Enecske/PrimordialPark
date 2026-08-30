@@ -3,7 +3,7 @@ package net.enecske.primordial_park.block.custom;
 import com.mojang.serialization.MapCodec;
 import net.enecske.primordial_park.block.ModBlockEntities;
 import net.enecske.primordial_park.block.entity.PaleontologyTableBlockEntity;
-import net.enecske.primordial_park.inventory.PaleontologyTableMenu;
+import net.enecske.primordial_park.inventory.menu.PaleontologyTableMenu;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.InteractionResult;

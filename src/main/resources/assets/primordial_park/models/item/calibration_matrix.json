@@ -1,0 +1,14 @@
+{
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "primordial_park:item/calibration_matrix"
+    },
+    "overrides": [
+        {
+            "predicate": {
+                "primordial_park:calibration_matrix_active": 1
+            },
+            "model": "primordial_park:item/calibration_matrix_active"
+        }
+    ]
+}

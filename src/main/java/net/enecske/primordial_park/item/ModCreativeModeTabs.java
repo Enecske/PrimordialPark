@@ -38,8 +38,10 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.FOSSIL_POUCH);
 
                         output.accept(ModBlocks.PALEONTOLOGY_TABLE);
+                        output.accept(ModItems.CALIBRATION_MATRIX);
 
                         output.accept(ModItems.REPORT_CARD);
+                        output.accept(ModItems.RESONANT_SHARD);
 
                         output.accept(ModItems.FOSSIL_CONCRETION);
 

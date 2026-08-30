@@ -1,7 +1,7 @@
 package net.enecske.primordial_park.network;
 
 import net.enecske.primordial_park.PrimordialPark;
-import net.enecske.primordial_park.inventory.HandbookUpgradeMenu;
+import net.enecske.primordial_park.inventory.menu.HandbookUpgradeMenu;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.codec.StreamCodec;

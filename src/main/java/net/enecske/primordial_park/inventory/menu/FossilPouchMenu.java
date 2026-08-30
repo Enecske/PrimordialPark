@@ -1,5 +1,6 @@
-package net.enecske.primordial_park.inventory;
+package net.enecske.primordial_park.inventory.menu;
 
+import net.enecske.primordial_park.inventory.ModMenuTypes;
 import net.enecske.primordial_park.item.ModDataComponents;
 import net.enecske.primordial_park.item.ModItems;
 import net.enecske.primordial_park.item.component.FossilPouchComponent;

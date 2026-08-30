@@ -21,7 +21,8 @@
         "recipes": [
             "primordial_park:paleontology_table",
             "primordial_park:report_card",
-            "primordial_park:fossil_pouch"
+            "primordial_park:fossil_pouch",
+            "primordial_park:calibration_matrix"
         ]
     }
 }

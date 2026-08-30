@@ -4,7 +4,7 @@ import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import net.enecske.primordial_park.PrimordialPark;
 import net.enecske.primordial_park.entity.ModAttachments;
 import net.enecske.primordial_park.entity.attachment.SpeciesIndexAttachment;
-import net.enecske.primordial_park.inventory.FossilPouchMenu;
+import net.enecske.primordial_park.inventory.menu.FossilPouchMenu;
 import net.enecske.primordial_park.item.ModDataComponents;
 import net.enecske.primordial_park.item.ModItems;
 import net.enecske.primordial_park.item.component.FossilPouchComponent;

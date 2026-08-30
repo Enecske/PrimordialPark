@@ -1,6 +1,6 @@
 package net.enecske.primordial_park.item.custom;
 
-import net.enecske.primordial_park.inventory.FossilPouchMenu;
+import net.enecske.primordial_park.inventory.menu.FossilPouchMenu;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
@@ -22,9 +22,9 @@ public class FossilPouchItem extends Item {
 
         if (!level.isClientSide) {
             player.openMenu(new SimpleMenuProvider(
-                    (containerId, playerInventory, player1) ->
-                            new FossilPouchMenu(containerId, playerInventory, stack),
-                    Component.translatable("item.primordial_park.fossil_pouch")),
+                            (containerId, playerInventory, player1) ->
+                                    new FossilPouchMenu(containerId, playerInventory, stack),
+                            Component.translatable("item.primordial_park.fossil_pouch")),
                     buf -> ItemStack.OPTIONAL_STREAM_CODEC.encode(buf, stack)
             );
         }

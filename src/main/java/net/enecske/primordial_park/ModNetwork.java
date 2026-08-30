@@ -1,5 +1,6 @@
 package net.enecske.primordial_park;
 
+import net.enecske.primordial_park.network.CalibrateMatrixPayload;
 import net.enecske.primordial_park.network.OpenHandbookUpgradeScreenPayload;
 import net.enecske.primordial_park.network.SyncSpeciesIndexPayload;
 import net.enecske.primordial_park.network.ToggleAutoPickupPayload;
@@ -24,6 +25,12 @@ public class ModNetwork {
                 ToggleAutoPickupPayload.TYPE,
                 ToggleAutoPickupPayload.STREAM_CODEC,
                 ToggleAutoPickupPayload::handleOnServer
+        );
+
+        registrar.playToServer(
+                CalibrateMatrixPayload.TYPE,
+                CalibrateMatrixPayload.STREAM_CODEC,
+                CalibrateMatrixPayload::handleOnServer
         );
 
         registrar.playToClient(

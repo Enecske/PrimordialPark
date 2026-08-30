@@ -1,6 +1,7 @@
 package net.enecske.primordial_park.event;
 
 import net.enecske.primordial_park.PrimordialPark;
+import net.enecske.primordial_park.client.gui.CalibrationMatrixScreen;
 import net.enecske.primordial_park.client.gui.FossilPouchScreen;
 import net.enecske.primordial_park.client.gui.HandbookUpgradeScreen;
 import net.enecske.primordial_park.client.gui.PaleontologyTableScreen;
@@ -26,5 +27,6 @@ public class ModClientEvents {
         event.register(ModMenuTypes.HANDBOOK_UPGRADE.get(), HandbookUpgradeScreen::new);
         event.register(ModMenuTypes.PALEONTOLOGY_TABLE.get(), PaleontologyTableScreen::new);
         event.register(ModMenuTypes.FOSSIL_POUCH.get(), FossilPouchScreen::new);
+        event.register(ModMenuTypes.CALIBRATION_MATRIX.get(), CalibrationMatrixScreen::new);
     }
 }

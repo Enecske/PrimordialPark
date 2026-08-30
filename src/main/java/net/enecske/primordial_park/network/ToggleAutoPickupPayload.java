@@ -1,7 +1,7 @@
 package net.enecske.primordial_park.network;
 
 import net.enecske.primordial_park.PrimordialPark;
-import net.enecske.primordial_park.inventory.FossilPouchMenu;
+import net.enecske.primordial_park.inventory.menu.FossilPouchMenu;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.network.protocol.common.custom.CustomPacketPayload;

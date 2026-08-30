@@ -1,7 +1,7 @@
 package net.enecske.primordial_park.client.gui;
 
 import net.enecske.primordial_park.PrimordialPark;
-import net.enecske.primordial_park.inventory.HandbookUpgradeMenu;
+import net.enecske.primordial_park.inventory.menu.HandbookUpgradeMenu;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.network.chat.Component;

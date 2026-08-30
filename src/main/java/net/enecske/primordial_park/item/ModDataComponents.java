@@ -57,6 +57,13 @@ public class ModDataComponents {
                     .networkSynchronized(ReportCardComponent.STREAM_CODEC)
     );
 
+    public static final Supplier<DataComponentType<CalibrationMatrixComponent>> CALIBRATION_MATRIX = DATA_COMPONENTS.registerComponentType(
+            "calibration_matrix",
+            builder -> builder
+                    .persistent(CalibrationMatrixComponent.CODEC)
+                    .networkSynchronized(CalibrationMatrixComponent.STREAM_CODEC)
+    );
+
     public static void register(IEventBus eventBus) {
         DATA_COMPONENTS.register(eventBus);
     }

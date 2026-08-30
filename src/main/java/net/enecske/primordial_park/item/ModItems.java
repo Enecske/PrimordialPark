@@ -19,6 +19,7 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 import java.util.ArrayList;
 import java.util.Optional;
 
+@SuppressWarnings("unused")
 public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(PrimordialPark.MODID);
 
@@ -48,6 +49,15 @@ public class ModItems {
 
     public static final DeferredItem<Item> REPORT_CARD = ITEMS.register("report_card",
             () -> new ReportCardItem(new Item.Properties()));
+
+    public static final DeferredItem<Item> RESONANT_SHARD = ITEMS.register("resonant_shard",
+            () -> new Item(new Item.Properties()
+                    .rarity(Rarity.UNCOMMON)));
+
+    public static final DeferredItem<Item> CALIBRATION_MATRIX = ITEMS.register("calibration_matrix",
+            () -> new CalibrationMatrixItem(new Item.Properties()
+                    .stacksTo(1)
+                    .rarity(Rarity.EPIC)));
 
 
     public static final ArrayList<DeferredItem<Item>> FOSSILS = new ArrayList<>();

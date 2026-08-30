@@ -1,7 +1,7 @@
 package net.enecske.primordial_park.client.gui;
 
 import net.enecske.primordial_park.PrimordialPark;
-import net.enecske.primordial_park.inventory.FossilPouchMenu;
+import net.enecske.primordial_park.inventory.menu.FossilPouchMenu;
 import net.enecske.primordial_park.network.ToggleAutoPickupPayload;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;

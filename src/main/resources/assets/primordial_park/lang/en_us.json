@@ -5,6 +5,9 @@
     "item.primordial_park.handbook_upgrade": "Handbook Upgrade",
     "item.primordial_park.unknown_fossil": "Unknown Fossil",
     "item.primordial_park.report_card": "Report Card",
+    "item.primordial_park.resonant_shard": "Resonant Shard",
+    "item.primordial_park.calibration_matrix": "Calibration Matrix",
+
     "item.primordial_park.mammoth_cranium": "Mammoth Cranium",
     "item.primordial_park.frozen_mammoth_flesh": "Frozen Mammoth Flesh",
 
@@ -24,6 +27,7 @@
     "tooltip.primordial_park.report_card_time_period": "Time Period",
     "tooltip.primordial_park.report_card_species": "Species",
     "tooltip.primordial_park.report_card_empty": "Empty",
+    "tooltip.primordial_park.calibration_matrix_destination": "Destination",
 
     "creativetab.primordial_park.primordial_park_tab": "Primordial Park",
     "creativetab.primordial_park.fossils_tab": "Fossils",
@@ -31,6 +35,7 @@
     "container.primordial_park.upgrade_handbook": "Upgrade Handbook",
     "label.primordial_park.fossils_found": "Fossils found",
     "button.primordial_park.auto_pickup": "Toggle Auto Pickup",
+    "button.primordial_park.calibrate": "Calibrate",
 
     "handbook.primordial_park.species_index": "Species Index",
     "handbook.primordial_park.time_travel": "Time Travel",

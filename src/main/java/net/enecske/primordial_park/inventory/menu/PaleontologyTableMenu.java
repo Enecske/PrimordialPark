@@ -1,7 +1,8 @@
-package net.enecske.primordial_park.inventory;
+package net.enecske.primordial_park.inventory.menu;
 
 import net.enecske.primordial_park.block.ModBlocks;
 import net.enecske.primordial_park.block.entity.PaleontologyTableBlockEntity;
+import net.enecske.primordial_park.inventory.ModMenuTypes;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;

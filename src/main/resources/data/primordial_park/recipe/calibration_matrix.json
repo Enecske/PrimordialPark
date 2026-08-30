@@ -1,0 +1,26 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "equipment",
+    "pattern": [
+        "IGI",
+        "GRG",
+        "IDI"
+    ],
+    "key": {
+        "I": {
+            "item": "minecraft:iron_ingot"
+        },
+        "G": {
+            "item": "minecraft:glass"
+        },
+        "R": {
+            "item": "primordial_park:resonant_shard"
+        },
+        "D": {
+            "item": "minecraft:diamond"
+        }
+    },
+    "result": {
+        "id": "primordial_park:calibration_matrix"
+    }
+}

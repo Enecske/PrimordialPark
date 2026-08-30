@@ -1,6 +1,10 @@
 package net.enecske.primordial_park.inventory;
 
 import net.enecske.primordial_park.PrimordialPark;
+import net.enecske.primordial_park.inventory.menu.CalibrationMatrixMenu;
+import net.enecske.primordial_park.inventory.menu.FossilPouchMenu;
+import net.enecske.primordial_park.inventory.menu.HandbookUpgradeMenu;
+import net.enecske.primordial_park.inventory.menu.PaleontologyTableMenu;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.inventory.MenuType;
 import net.minecraft.world.item.ItemStack;
@@ -24,6 +28,10 @@ public class ModMenuTypes {
     public static final Supplier<MenuType<FossilPouchMenu>> FOSSIL_POUCH =
             MENUS.register("fossil_pouch", () ->
                     IMenuTypeExtension.create((containerId, inv, data) -> new FossilPouchMenu(containerId, inv, ItemStack.OPTIONAL_STREAM_CODEC.decode(data))));
+
+    public static final Supplier<MenuType<CalibrationMatrixMenu>> CALIBRATION_MATRIX =
+            MENUS.register("calibration_matrix", () ->
+                    IMenuTypeExtension.create((containerId, inv, data) -> new CalibrationMatrixMenu(containerId, inv, ItemStack.OPTIONAL_STREAM_CODEC.decode(data))));
 
     public static void register(IEventBus eventBus) {
         MENUS.register(eventBus);

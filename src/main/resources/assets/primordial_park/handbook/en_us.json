@@ -94,6 +94,26 @@
                             "id": "primordial_park:paleontology_table"
                         }
                     ]
+                },
+                {
+                    "paragraphs": [
+                        {
+                            "type": "text",
+                            "text": "The Villager will immediately head for the Paleontology Table when the necessary items are inserted and the analysis can begin."
+                        },
+                        {
+                            "type": "text",
+                            "text": "You can automate the analysis. Use hoppers to insert fossils on the top and report cards at the sides of the Paleontology Table. Hoppers below it will extract written report cards. Power the Table, to extract the fossils themselves below. Modded item transportation methods are also compatible."
+                        }
+                    ]
+                },
+                {
+                    "paragraphs": [
+                        {
+                            "type": "text",
+                            "text": "To calibrate the Time Portal, you'll need the report cards of 3 species of the same age."
+                        }
+                    ]
                 }
             ]
         },
