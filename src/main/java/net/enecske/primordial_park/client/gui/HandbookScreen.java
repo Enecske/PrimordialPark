@@ -266,13 +266,10 @@ public class HandbookScreen extends Screen {
                                 contentHeight += font.wordWrapHeight(paragraph, boxRight - boxLeft) + 4;
                             }
 
-                            Optional<SpeciesIndexAttachment.SpeciesEntryAttachment> optional = attachment.entries().stream().filter(entry -> Objects.equals(entry.id(), selectedEntry.id())).findFirst();
-                            if (optional.isEmpty()) {
-                                PrimordialPark.LOGGER.error("Error while initializing HandbookScreen");
-                                onClose();
-                                return;
-                            }
-                            SpeciesIndexAttachment.SpeciesEntryAttachment entryAttachment = optional.get();
+                            SpeciesIndexAttachment.SpeciesEntryAttachment entryAttachment = attachment.entries().stream()
+                                    .filter(entry -> Objects.equals(entry.id(), selectedEntry.id()))
+                                    .findFirst()
+                                    .orElse(new SpeciesIndexAttachment.SpeciesEntryAttachment(selectedEntry.id(), List.of(), false));
 
                             fossilItemStacks = new LinkedHashMap<>();
                             fossilsFound = 0;

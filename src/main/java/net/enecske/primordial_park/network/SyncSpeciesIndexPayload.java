@@ -17,8 +17,7 @@ public record SyncSpeciesIndexPayload(SpeciesIndexAttachment attachment) impleme
             new Type<>(ResourceLocation.fromNamespaceAndPath(PrimordialPark.MODID, "sync_species_index"));
 
     public static final StreamCodec<RegistryFriendlyByteBuf, SyncSpeciesIndexPayload> STREAM_CODEC = StreamCodec.composite(
-            ByteBufCodecs.fromCodec(SpeciesIndexAttachment.CODEC),
-            SyncSpeciesIndexPayload::attachment,
+            ByteBufCodecs.fromCodec(SpeciesIndexAttachment.CODEC), SyncSpeciesIndexPayload::attachment,
             SyncSpeciesIndexPayload::new
     );
 

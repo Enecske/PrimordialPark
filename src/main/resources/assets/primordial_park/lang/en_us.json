@@ -23,6 +23,8 @@
     "handbook_upgrade.primordial_park.biotech_advanced": "Advanced Biotechnology",
     "handbook_upgrade.primordial_park.biosynthesis": "Biosynthesis",
 
+    "toast.primordial_park.fossil_discovered": "Fossil discovered!",
+
     "tooltip.primordial_park.handbook_upgrades": "Upgrades",
     "tooltip.primordial_park.report_card_time_period": "Time Period",
     "tooltip.primordial_park.report_card_species": "Species",

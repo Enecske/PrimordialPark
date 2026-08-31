@@ -19,6 +19,15 @@ public record SpeciesIndexAttachment(List<SpeciesEntryAttachment> entries) {
         return this.entries.stream().anyMatch(entry -> entry.id.equals(id));
     }
 
+    public boolean hasFossil(String id, String fossil) {
+        if (!this.hasSpecies(id)) return false;
+
+        SpeciesEntryAttachment entry = entries.stream().filter(speciesEntryAttachment ->
+                speciesEntryAttachment.id.equals(id)).findFirst().orElseGet(() -> new SpeciesEntryAttachment(id, List.of(), false));
+
+        return entry.fossils().stream().anyMatch(fossilId -> fossilId.equals(fossil));
+    }
+
     public SpeciesIndexAttachment addSpecies(String id) {
         if (hasSpecies(id)) return this;
 

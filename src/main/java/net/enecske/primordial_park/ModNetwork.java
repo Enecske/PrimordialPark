@@ -1,9 +1,6 @@
 package net.enecske.primordial_park;
 
-import net.enecske.primordial_park.network.CalibrateMatrixPayload;
-import net.enecske.primordial_park.network.OpenHandbookUpgradeScreenPayload;
-import net.enecske.primordial_park.network.SyncSpeciesIndexPayload;
-import net.enecske.primordial_park.network.ToggleAutoPickupPayload;
+import net.enecske.primordial_park.network.*;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.network.event.RegisterPayloadHandlersEvent;
@@ -37,6 +34,12 @@ public class ModNetwork {
                 SyncSpeciesIndexPayload.TYPE,
                 SyncSpeciesIndexPayload.STREAM_CODEC,
                 SyncSpeciesIndexPayload::handleOnClient
+        );
+
+        registrar.playToClient(
+                ShowFossilToastPayload.TYPE,
+                ShowFossilToastPayload.STREAM_CODEC,
+                ShowFossilToastPayload::handleOnClient
         );
     }
 }

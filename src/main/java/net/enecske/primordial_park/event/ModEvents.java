@@ -4,6 +4,7 @@ import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import net.enecske.primordial_park.PrimordialPark;
 import net.enecske.primordial_park.entity.ModAttachments;
 import net.enecske.primordial_park.entity.attachment.SpeciesIndexAttachment;
+import net.enecske.primordial_park.helper.FossilDiscoveryHelper;
 import net.enecske.primordial_park.inventory.menu.FossilPouchMenu;
 import net.enecske.primordial_park.item.ModDataComponents;
 import net.enecske.primordial_park.item.ModItems;
@@ -24,6 +25,7 @@ import net.minecraft.world.item.trading.MerchantOffer;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.entity.player.ItemEntityPickupEvent;
+import net.neoforged.neoforge.event.entity.player.PlayerContainerEvent;
 import net.neoforged.neoforge.event.entity.player.PlayerEvent;
 import net.neoforged.neoforge.event.village.VillagerTradesEvent;
 import net.neoforged.neoforge.event.village.WandererTradesEvent;
@@ -86,6 +88,8 @@ public class ModEvents {
         if (groundStack.get(ModDataComponents.FOSSIL) == null || groundStack.getItem() instanceof FossilPouchItem)
             return;
 
+        FossilDiscoveryHelper.checkAndRegisterFossil((ServerPlayer) player, groundStack);
+
         for (int i = 0; i < player.getInventory().getContainerSize(); i++) {
             ItemStack pouch = player.getInventory().getItem(i);
 
@@ -122,6 +126,14 @@ public class ModEvents {
                     }
                 }
             }
+        }
+    }
+
+    @SubscribeEvent
+    public static void onContainerClose(PlayerContainerEvent.Close event) {
+        if (event.getEntity() instanceof ServerPlayer serverPlayer) {
+            for (ItemStack stack : serverPlayer.getInventory().items)
+                FossilDiscoveryHelper.checkAndRegisterFossil(serverPlayer, stack);
         }
     }
 }
